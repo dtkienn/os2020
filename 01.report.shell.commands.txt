@@ -1,0 +1,60 @@
+1)  input: echo HEllo WOrld
+    output: HEllo WOrld
+
+2)  input: passwd
+    output: Changing password for dtkien__.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+3)  input: hostname
+    output: You
+
+4)  input: arch
+    output: x86_64
+
+5)  input: uname -a
+    output: Linux You 4.15.0-30deepin-generic #31 SMP Fri Nov 30 04:29:02 UTC 2018 x86_64 GNU/Linux
+
+6)  input: dmesg
+    output: [  616.304489] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  616.442157] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  616.669875] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  616.670892] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  616.876433] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  616.876442] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  617.081205] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  617.181810] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  617.184110] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+[  617.184118] iwlwifi 0000:00:14.3: Unhandled alg: 0x707
+
+7)  input: uptime
+    output: 09:56:20 up 10 min,  1 user,  load average: 0.66, 0.50, 0.29
+
+8)  input: who am i
+    output: nothing...
+
+9)  input: whoami
+    output: dtkien__
+
+10) input: who
+    output: dtkien__ tty1         2020-01-17 09:46 (:0)
+
+11) input: id
+    output: uid=1000(dtkien__) gid=1000(dtkien__) groups=1000(dtkien__),7(lp),27(sudo),100(users),109(netdev),113(lpadmin),119(scanner),123(sambashare)
+
+12) input: last
+    output: dtkien__ tty1         :0               Fri Jan 17 09:46   still logged in
+reboot   system boot  4.15.0-30deepin- Fri Jan 17 16:45   still running
+
+wtmp begins Fri Jan 17 16:45:55 2020
+
+13) input: finger
+    output: nothing...
+
+14) input: w
+    output: 09:57:00 up 11 min,  1 user,  load average: 0.34, 0.44, 0.28
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+dtkien__ tty1     :0               09:46   11:04  26.04s  0.47s /usr/bin/startdde
+
