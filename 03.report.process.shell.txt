@@ -1,0 +1,62 @@
+1. List all your running processes (ps with more info from man)
+Input:
+dtkien__@You:~$ ps
+
+OUtput:  
+PID TTY          TIME CMD
+11732 pts/0    00:00:00 bash
+11745 pts/0    00:00:00 bash
+11755 pts/0    00:00:00 ps
+
+Input:
+dtkien__@You:~$ ps -A
+
+Output:
+12098 ?        00:00:00 kworker/5:3
+12129 ?        00:00:00 kworker/6:3
+12182 ?        00:00:01 chrome
+12797 ?        00:00:00 kworker/7:0
+13020 ?        00:00:00 kworker/1:0
+13742 ?        00:00:00 chrome
+14179 ?        00:00:00 kworker/3:0
+14224 ?        00:00:00 kworker/0:2
+14274 ?        00:00:00 kworker/2:0
+14276 ?        00:00:00 kworker/4:2
+14292 ?        00:00:00 kworker/5:0
+14368 ?        00:00:00 kworker/7:2
+14380 ?        00:00:00 kworker/u16:1
+14384 ?        00:00:00 kworker/3:2
+14399 ?        00:00:00 sound-theme-pla
+14452 ?        00:00:00 kworker/1:2
+14453 pts/0    00:00:00 ps
+
+2. Start a new process, gnome-calculator for example
+INput: 
+gnome-calculator
+Output: THe calculator app
+
+3.Find process id of your newly-created process (ps with
+grep)
+
+Input:
+dtkien__@You:~$ ps aux | grep gnome-calculator | awk '{print $2}'
+Output:
+14588
+
+4. Show its process status (see content of /proc/<id>/status)
+
+dtkien__@You:~$ /proc/14588/status
+bash: /proc/14588/status: No such file or directory
+
+I don't understand why when I try the (4) part, the id of the previous gnome-calculator changed right away, so it turned out "no such file or directory"
+
+dtkien__@You:~$ ps aux | grep gnome-calculator | awk '{print $2}'
+14686
+dtkien__@You:~$ cat /proc/14686/status
+cat: /proc/14686/status: No such file or directory
+dtkien__@You:~$ ps aux | grep gnome-calculator | awk '{print $2}'
+14699
+dtkien__@You:~$ cat /proc/14699/status | tail -10
+cat: /proc/14699/status: No such file or directory
+
+Can you give me comments when you check my files out? Thanks a lot!
